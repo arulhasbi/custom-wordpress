@@ -7,6 +7,17 @@ function custom_theme_support() {
 
 add_action('after_setup_theme', 'custom_theme_support');
 
+// add menus
+function custom_menus() {
+    $locations = array(
+        'primary' => "Locate in header",
+        'secondary' => 'Locate in footer'
+    );
+    register_nav_menus($locations);
+}
+
+add_action('init', 'custom_menus');
+
 function custom_register_styles() {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('ahasbi-bootstrap', "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css", array(), '4.6.0', 'all');
