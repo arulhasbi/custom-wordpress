@@ -12,21 +12,39 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                    <img src="https://brand.utm.my/files/2016/08/jointlogo-768x768.jpeg" width="45" height="45" alt="UTM Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav menus">
-                        <a class="nav-item nav-link active" href="#">home<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link disabled">/</a>
-                        <a class="nav-item nav-link" href="#">works</a>
-                        <a class="nav-item nav-link disabled">/</a>
-                        <a class="nav-item nav-link" href="#">contact</a>
+            <div class="card">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light menus">
+                    <a class="navbar-brand" href="#">
+                        <?php
+                            if (function_exists('the_custom_logo')) {
+                                $custom_logo_id = get_theme_mod('custom_logo');
+                                $logo = wp_get_attachment_image_src($custom_logo_id);
+                            }
+                        ?>
+                        <img src="<?php echo $logo[0] ?>" width="40" height="40" alt="UTM Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            <?php echo get_bloginfo('name') ?>
+                        </span>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </header>
