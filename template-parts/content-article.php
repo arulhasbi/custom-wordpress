@@ -1,20 +1,24 @@
 <div class="article-wrapper">
     <div class="article-header">
+        <p class="article-title h3">
+            <?php
+                the_title();
+            ?>
+        </p>
         <p class="lead">
             <span>
                 <i class="bi bi-clock"></i>
-                Published 3 months ago
+                <?php the_date(); ?>
             </span>
             |
             <span>
                 <i class="bi bi-chat-text"></i>
-                3 Comments
+                <?php comments_number(); ?>
             </span>
             |
-            <span class="badge badge-secondary">
-                <i class="bi bi-tag-fill"></i>
-                Artificial intelligence
-            </span>
+            <?php
+                the_tags('<span class="badge badge-secondary"><i class="bi bi-tag-fill"></i>', '</span><span class="badge badge-secondary"><i class="bi bi-tag-fill"></i>', '</span>')
+            ?>
         </p>
     </div>
     <div class="article-image text-center">
@@ -22,15 +26,15 @@
         <p class="lead">Image credit: Short url here</p>
     </div>
     <div class="article-body">
-        <p class="article-body-title h4">
-            <?php
-                the_title();
-            ?>
-        </p>
         <p class="article-body-content">
             <?php
                 the_content();
             ?>
         </p>
+    </div>
+    <div class="article-comments">
+        <?php
+            comments_template();
+        ?>
     </div>
 </div>

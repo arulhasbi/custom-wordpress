@@ -12,6 +12,10 @@ Author URI: https://linkedin.com
     border: 1px dashed blue;
 }
 
+.depth-1 {
+    padding-left: 40px;
+}
+
 .menus {
     padding-left: 18px;
     padding-right: 18px;
@@ -25,15 +29,35 @@ Author URI: https://linkedin.com
     padding: 15px;
 }
 
-.article-header > p {
-    font-size: .8em;
-    margin-bottom: 0;
-    text-align: center;
+.article-header {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.article-header > p > span {
+.article-header > p:first-child {
+    margin-bottom: 18px;
+}
+
+.article-header > p:last-child {
+    font-size: .8em;
+    margin-bottom: 0;
+}
+
+.article-header > p:last-child > span {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.article-header .badge > a {
+    color: white;
+}
+
+.article-header .badge > i {
+    margin-right: 5px;
+}
+
+.article-header .badge {
+    padding: 5px;
 }
 
 .article-image {
@@ -58,9 +82,67 @@ Author URI: https://linkedin.com
     padding-top: 25px;
 }
 
-.article-body > p:last-child {
+.article-body > p {
     font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-    margin-top: 15px;
+}
+
+.article-comments {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comments-wrapper {
+    margin-bottom: 20px;
+}
+
+.comments-header {
+    margin-bottom: 15px;
+}
+
+.comments p {
+    margin-bottom: 3px;
+}
+
+.comments .lead {
+    font-size: .8em;
+}
+
+.comments .card-link {
+    font-size: .8em;
+}
+
+.comments-respond .comment-notes {
+    font-size: .8em;
+    margin-bottom: 10px;
+}
+
+.comments-respond .comment-form-comment > label,
+.comments-respond .comment-form-author > label,
+.comments-respond .comment-form-email > label,
+.comments-respond .comment-form-url > label {
+    width: 100%;
+    font-size: .9em;
+}
+
+.comments-respond .form-submit > .submit {
+    padding: 10px;
+    font-size: .9em;
+}
+
+.comments-respond .comment-form-cookies-consent > label {
+    font-size: .8em;
+}
+
+.comments-respond .comment-form-comment > textarea,
+.comments-respond .comment-form-author > input,
+.comments-respond .comment-form-email > input,
+.comments-respond .comment-form-url > input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.comments-respond .comment-form-comment > textarea {
+    height: 100px;
 }
 
 .footer {
@@ -69,6 +151,10 @@ Author URI: https://linkedin.com
     bottom: 0;
     width: 100%;
     text-align: center;
+}
+
+.comments .avatar {
+    margin-right: 20px;
 }
 
 .footer > p {
