@@ -12,10 +12,9 @@ Author URI: https://linkedin.com
     border: 1px dashed blue;
 }
 
-.depth-1 {
-    padding-left: 40px;
-}
-
+/*
+menus
+*/
 .menus {
     padding-left: 18px;
     padding-right: 18px;
@@ -23,6 +22,20 @@ Author URI: https://linkedin.com
     padding-bottom: 11px;
 }
 
+/*
+comments utilities
+*/
+.depth-2 {
+    padding-left: 40px;
+}
+
+.depth-3 {
+    padding-left: 60px;
+}
+
+/*
+article
+*/
 .article-wrapper {
     margin-top: 20px;
     max-width: 1100px;
@@ -79,7 +92,6 @@ Author URI: https://linkedin.com
 .article-body {
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 25px;
 }
 
 .article-body > p {
@@ -91,6 +103,10 @@ Author URI: https://linkedin.com
     margin: 0 auto;
 }
 
+/*
+Comments
+*/
+
 .comments-wrapper {
     margin-bottom: 20px;
 }
@@ -101,14 +117,6 @@ Author URI: https://linkedin.com
 
 .comments p {
     margin-bottom: 3px;
-}
-
-.comments .lead {
-    font-size: .8em;
-}
-
-.comments .card-link {
-    font-size: .8em;
 }
 
 .comments-respond .comment-notes {
@@ -144,6 +152,34 @@ Author URI: https://linkedin.com
 .comments-respond .comment-form-comment > textarea {
     height: 100px;
 }
+
+.comments-inner {
+    max-height: 325px;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+.comments-inner .comment-author {
+    font-size: .8em;
+    margin: 0;
+}
+
+.comments-inner .comment-meta-item {
+    font-size: .8em;
+}
+
+.comments-inner .card {
+    margin-bottom: 15px;
+}
+
+.comments-inner .comment-content > p,
+.comments-inner .comment-content > a {
+    font-size: .8em;
+}
+
+/*
+Footer
+*/
 
 .footer {
     position: fixed;
